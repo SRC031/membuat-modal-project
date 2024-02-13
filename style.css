@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-on-active::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transition: ease all 1200ms;
+}
+
+.modalButton {
+    border: none;
+    border-radius: 3px;
+    padding: 18px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: chartreuse;
+    box-shadow: 0 0 9px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transform: translateY(calc(50vh - 30px));
+}
+
+.exampleModal {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 9px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 18px 24px;
+    top: 5vh;
+    right: 50%;
+    transform: translateX(50%);
+    width: 50vw;
+    display: none;
+    z-index: 100;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 10px;
+    border-top-right-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.exampleModal.show {
+    display: block;
+    animation: showModal 1200ms;
+}
